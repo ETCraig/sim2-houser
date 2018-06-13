@@ -1,0 +1,1 @@
+DELETE FROM houserProperties WHERE prop_id = $1;
