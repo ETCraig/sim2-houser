@@ -1,16 +1,3 @@
-create table houserUsers(
-userid serial PRIMARY KEY,
-username VARCHAR(50),
-password VARCHAR(20) 
-);
-
-INSERT INTO houserUsers
-(username, password)
-VALUES
-('username', 'password') RETURNING *;
-
-SELECT * FROM houserUsers WHERE id = $1;
-
 DROP TABLE IF EXISTS houserProperties;
 
 CREATE TABLE IF NOT EXISTS houserProperties(
