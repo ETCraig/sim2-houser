@@ -12,13 +12,13 @@ import Step5 from './Components/Steps/Step5';
 
 export default(
     <Switch>
-        <Route component = {Login} exact path = "/" />
-        <Route component = {Dashboard} path = '/Dashboard' />
-        <Route component = {Wizard} path = "/Wizard" />
-        <Route component = {Step1} path = "/Step-1" />
-        <Route component = {Step2} path = "/Step-2" />
-        <Route component = {Step3} path = "/Step-3" />
-        <Route component = {Step4} path = "/Step-4" />
-        <Route component = {Step5} path = "/Step-5" />
+        <Route exact path = "/" component = {Login} />
+        <Route path = '/Dashboard' component = {Dashboard} />
+        <Route path = "/Wizard" component = {Wizard} />
+        <Route path = "/Step-1" component = {Step1} />
+        <Route path = "/Step-2" component = {Step2} />
+        <Route path = "/Step-3" component = {Step3} />
+        <Route path = "/Step-4" component = {Step4} />
+        <Route path = "/Step-5" component = {Step5} />
     </Switch>
 )

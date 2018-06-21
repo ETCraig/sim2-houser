@@ -33,6 +33,7 @@
 } 
 .step4-cancel-btn:hover {
     opacity:0.7;
+    cursor: pointer;
 }
 .step4-indicator{
     display: flex;
@@ -91,6 +92,7 @@
 }  
 .step4-btn-prev:hover {
       opacity:0.7;
+      cursor: pointer;
 }  
 .step4-btn-next{
     background-color: #3B5249;
@@ -107,4 +109,5 @@
 }
 .step4-btn-next:hover {
     opacity:0.7;
+    cursor: pointer;
 }  

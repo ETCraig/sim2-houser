@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import axios from 'axios';
 import './Step5.css';
 import Header from '../Header/Header';
 // import Inactive from './../../assets/step_inactive.png';
@@ -24,8 +25,21 @@ class Step5 extends Component {
         this.setState({rent: val});
     }
     handleComplteBtnClick() {
-        this.props.addPropertyInfo({
+        let promise = axios.post('/api/properties', {
+            prop_name: this.props.name,
+            prop_desc: this.props.description,
+            address: this.props.address,
+            city: this.props.city,
+            state: this.props.state,
+            zip: this.props.zip,
+            img_url: this.props.imgUrl,
+            loan_amt: this.props.loan,
+            mon_mort: this.props.mortgage,
             rent: this.state.rent
+        });
+        promise.then(res => {
+            this.props.delPropertyInfo()
+            this.props.history.push('/Dashboard')
         });
     }
     handleCancelBtnClick() {
@@ -57,8 +71,8 @@ class Step5 extends Component {
                             <input onChange = {(e) => this.handleRentChange(e.target.value)} className = 'step5-input-rent' type = 'text' value = {this.state.rent} />
                         </div>
                         <div className = 'step5-btn-wpr'>
-                            <Link to = './Step4'><button className = 'step5-btn-prev'>Previous Step</button></Link>
-                            <Link to = './Dashboard'><button onClick = {this.handleCancelBtnClick} className = 'step5-btn-complete' disabled = {this.state.completeBtnDisabele}>Complete</button></Link>
+                            <Link to = './Step-4'><button className = 'step5-btn-prev'>Previous Step</button></Link>
+                            <button onClick = {this.handleComplteBtnClick} className = 'step5-btn-complete' disabled = {this.state.completeBtnDisabele}>Complete</button>
                         </div>
                 </div>
             </div>
@@ -68,8 +82,16 @@ class Step5 extends Component {
 
 function mapStateToProps(state) {
     return {
-        rent: state.rent,
-        mortgage: state.mortgage
+        name: state.name,
+        description: state.description,
+        address: state.address,
+        city: state.city,
+        state: state.state,
+        zip: state.zip,
+        imgUrl: state.imgUrl,
+        loan: state.loan,
+        mortgage: state.mortgage,
+        rent: state.rent
     }
 }
 

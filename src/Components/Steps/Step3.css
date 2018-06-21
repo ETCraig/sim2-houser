@@ -33,6 +33,7 @@
 }
 .step3-cancel-btn:hover {
     opacity:0.7;
+    cursor: pointer;
 }
 .step3-indicator{
     display: flex;
@@ -92,6 +93,7 @@
 }  
 .step3-btn-prev:hover {
     opacity:0.7;
+    cursor: pointer;
 }
 .step3-btn-next{
     background-color: #3B5249;
@@ -108,4 +110,5 @@
 }
 .step3-btn-next:hover {
       opacity:0.7;
+      cursor: pointer;
 }

@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
-// import {Link} from 'react-router-dom';
+import './Wizard.css';
 
-export default class Wizard extends Component {
+class Wizard extends Component {
     render() {
         return(
             <div>
-                <p>Wizard</p>
+                Wizard
             </div>
         );
     }
 }
+
+export default Wizard;

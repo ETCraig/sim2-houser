@@ -1,9 +1,24 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import axios from 'axios';
 import './Header.css';
-import Logo from '../../assets/auth_logo.png';
+import {withRouter} from 'react-router-dom';
+import {delPropertyInfo} from '../../Redux/reducer';
+import {connect} from 'react-redux';
+import Logo from '../../assets/header_logo.png';
 
 class Header extends Component {
+    constructor() {
+        super()
+
+        this.handleLogout = this.handleLogout.bind(this);
+    }
+    handleLogout() {
+        axios.post('api/auth/logout').then(res => {
+            this.props.delPropertyInfo();
+            this.props.history.push('/');
+            alert('Logout Completed');
+        });
+    }
     render() {
         return(
             <div className = 'App'>
@@ -18,7 +33,7 @@ class Header extends Component {
                         <h1>Dashboard</h1>
                     </div>
                     <div className = 'logout-text'>
-                        <Link to = '/'>Logout</Link>
+                        <button onClick = {this.handleLogout} className = 'hdr-logout-btn'>Logout</button>
                     </div>
                 </div>
             </div>
@@ -26,4 +41,4 @@ class Header extends Component {
     }
 }
 
-export default Header;
+export default withRouter(connect(null, {delPropertyInfo})(Header));

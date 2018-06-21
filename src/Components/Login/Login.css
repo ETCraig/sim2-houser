@@ -57,6 +57,7 @@ margin-right: auto;
 }
 .login-btn-login:hover {
     opacity: 0.7;
+    cursor: pointer;
 }
 .login-btn-reg{
     text-align: center;
@@ -74,4 +75,5 @@ margin-right: auto;
   }
 .login-btn-reg:hover {
     opacity:0.7;
+    cursor: pointer;
 }

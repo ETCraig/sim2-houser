@@ -33,6 +33,7 @@
 }  
 .step5-cancel-btn:hover {
     opacity:0.7;
+    cursor: pointer;
 }
 .step5-indicator{
     display: flex;
@@ -88,6 +89,7 @@
 }  
 .step5-btn-prev:hover {
     opacity:0.7;
+    cursor: pointer;
 }
 .step5-btn-complete{
     background-color: #8AEA92;
@@ -104,4 +106,5 @@
 }
 .step5-btn-complete:hover {
       opacity:0.7;
+      cursor: pointer;
 }

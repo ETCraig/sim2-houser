@@ -37,6 +37,7 @@
 }
 .step1-cancel-btn:hover {
     opacity:0.7;
+    cursor: pointer;
 }
 .step1-indicator{
     display: flex;
@@ -92,4 +93,7 @@
     opacity: 1;
     outline: 0;
 }
-.step1-btn-next:hover {opacity:0.7;}
+.step1-btn-next:hover {
+    opacity:0.7;
+    cursor: pointer;
+}

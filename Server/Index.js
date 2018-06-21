@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const massive = require('massive');
-const session = require('express-session')
+const session = require('express-session');
 require('dotenv').config();
 
 //VARIABLES
@@ -35,7 +35,7 @@ app.post('/api/auth/register', ctrl.userReg)
 app.post('/api/auth/logout', ctrl.userLogout)
 app.post('/api/properties', ctrl.createProperty)
 app.get('/api/properties', ctrl.getProperties)
-app.delete('/api/properties/:id', ctrl.delProperty)
+app.delete('/api/properties/:propId', ctrl.delProperty)
 
 const port = process.env.PORT || 3200;
 app.listen(port, () => {console.log(`Listening and Oporating on: ${port}`)});

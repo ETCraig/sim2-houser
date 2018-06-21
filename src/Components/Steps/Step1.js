@@ -28,7 +28,7 @@ class Step1 extends Component {
         this.setState({ description: val });
     }
     handleNextBtnClick() {
-        this.props.addProperty({
+        this.props.addPropertyInfo({
             name: this.state.name,
             description: this.state.description
         });
@@ -63,7 +63,7 @@ class Step1 extends Component {
                     </div>
 
                     <div className='step1-btn-wpr'>
-                        <Link to='./Step2'><button onClick={this.handleNextBtnClick} className='step1-btn-next' disable={this.state.nextBtnDisable}>Next Step</button></Link>
+                        <Link to='./Step-2'><button onClick={this.handleNextBtnClick} className='step1-btn-next' disable={this.state.nextBtnDisable}>Next Step</button></Link>
                     </div>
                 </div>
             </div>

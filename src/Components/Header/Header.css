@@ -17,15 +17,14 @@
   
   .houser-text{
     font-weight: 700; 
-    font-size: 1.8em;
+    font-size: 1.4em;
     margin-left: 10px;
     margin-top: 0px;
   
   }
   
   .dashboard-text{
-    font-weight: 200; 
-    font-size: 1.8em;
+    font-size: 1.4em;
     margin-left: 10px;
   }
   
@@ -34,9 +33,18 @@
     font-size: 0.9em;
     font-weight: bold;
   }
-  
+.hdr-logout-btn{
+    font-size: 0.9em;
+    font-weight: bold;
+    color: white;
+    background-color: #519872;
+    border: none;
+}
   a {text-decoration: none;}
   
   a:visited{color: white;}
   
-  a:hover{color:#3B5249;}
+.hdr-logout-btn:hover{
+  color:#3B5249;
+  cursor: pointer;
+}

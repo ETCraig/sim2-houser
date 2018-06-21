@@ -70,7 +70,7 @@ class Step2 extends Component {
 
                     <div className='step2-input-wpr'>
                         <div className='step2-input-title'>Address</div>
-                        <input onChnage={(e) => this.handleAddressChange(e.target.value)} className='step2-input-address' type='text' value={this.state.address} />
+                        <input onChange={(e) => this.handleAddressChange(e.target.value)} className='step2-input-address' type='text' value={this.state.address} />
                         <div className='step2-input-subWpr'>
                             <div className='step-input-city-title'>City</div>
                             <input onChange={(e) => this.handleCityChange(e.target.value)} className='step2-input-city' type='text' value={this.state.city} />
@@ -82,8 +82,8 @@ class Step2 extends Component {
                     </div>
 
                     <div className='step2-btn-wpr'>
-                        <Link to='./Step1'><button className='step2-btn-prev'>Previous Step</button></Link>
-                        <Link to='./Step3'><button onClick={this.handleNextBtnClick} className='step2-btn-next' disabled={this.state.nextBtnDisabled}>Next Step </button></Link>
+                        <Link to='./Step-1'><button className='step2-btn-prev'>Previous Step</button></Link>
+                        <Link to='./Step-3'><button onClick={this.handleNextBtnClick} className='step2-btn-next' disabled={this.state.nextBtnDisabled}>Next Step </button></Link>
                     </div>
                 </div>
             </div>

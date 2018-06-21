@@ -55,7 +55,7 @@ class Home extends Component {
                         <div className="login-input-title">Username</div>
                         <input onChange={(e) => this.handleUsernameChange(e.target.value)} className="login-username" type="text" placeholder = "You're Username" />
                         <div className="login-input-title">Password</div>
-                        <input onChange={(e) => this.handlePasswordChange(e.target.value)} className="login-password" type="text" placeholder = "You're Password"/>
+                        <input onChange={(e) => this.handlePasswordChange(e.target.value)} className="login-password" type="password" placeholder = "You're Password"/>
                     </div>
                     <div className="login-btns">
                         <button onClick={this.handleLoginRequest} className="login-btn-login"> Login</button>

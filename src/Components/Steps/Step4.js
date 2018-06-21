@@ -64,8 +64,8 @@ class Step4 extends Component {
                     </div>
 
                     <div className='step4-btn-wpr'>
-                        <Link to='./Step3'><button className='step4-btn-prev'>Previous Page</button></Link>
-                        <Link to='./Step5'><button onClick={this.handleNextBtnClick} className='step4-btn-next' disabled={this.state.nextBtnDisable}>Next Step</button></Link>
+                        <Link to='./Step-3'><button className='step4-btn-prev'>Previous Page</button></Link>
+                        <Link to='./Step-5'><button onClick={this.handleNextBtnClick} className='step4-btn-next' disabled={this.state.nextBtnDisable}>Next Step</button></Link>
                     </div>
                 </div>
             </div>

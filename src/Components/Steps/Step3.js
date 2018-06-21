@@ -57,8 +57,8 @@ class Step3 extends Component {
                     </div>
 
                     <div className = 'step3-btn-wpr'>
-                        <Link to = './Step2'><button className = 'step3-btn-prev'>Previous Step</button></Link>
-                        <Link to = './Step4'><button onClick = {this.handleNextBtnClick} className = 'step3-btn-next' disabled = {this.state.nextBtnDisable}>Next Step</button></Link>
+                        <Link to = './Step-2'><button className = 'step3-btn-prev'>Previous Step</button></Link>
+                        <Link to = './Step-4'><button onClick = {this.handleNextBtnClick} className = 'step3-btn-next' disabled = {this.state.nextBtnDisable}>Next Step</button></Link>
                     </div>
                 </div>
             </div>
