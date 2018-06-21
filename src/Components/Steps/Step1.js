@@ -15,18 +15,18 @@ class Step1 extends Component {
             name: props.name,
             description: props.description,
             nextBtnDisable: false
-        }
+        }//HANDLEING OF STATES FOR ALL INPUTS AND BUTTONS
         this.handleNameChnage = this.handleNameChnage.bind(this);
         this.handleDescChange = this.handleDescChange.bind(this);
         this.handleNextBtnClick = this.handleNextBtnClick.bind(this);
         this.handleCancelBtnClick = this.handleCancelBtnClick.bind(this);
-    }
+    }//VAL = INPUT
     handleNameChnage(val) {
         this.setState({ name: val });
     }
     handleDescChange(val) {
         this.setState({ description: val });
-    }
+    }//TAKES THE STATES AND PLACES THEM IN ADDPROPINFO
     handleNextBtnClick() {
         this.props.addPropertyInfo({
             name: this.state.name,
@@ -77,5 +77,5 @@ function mapStateToProps(state) {
         description: state.description
     }
 }
-
+//REDUCER IN USE
 export default connect(mapStateToProps, { addPropertyInfo, delPropertyInfo })(Step1);

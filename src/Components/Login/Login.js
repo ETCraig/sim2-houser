@@ -12,18 +12,18 @@ class Home extends Component {
             username: "",
             password: "",
             btnDisable: true
-        }
+        }//HANDLEING OF STATES FOR ALL INPUTS AND BUTTONS
         this.handleUsernameChange = this.handleUsernameChange.bind(this);
         this.handlePasswordChange = this.handlePasswordChange.bind(this);
         this.handleLoginRequest = this.handleLoginRequest.bind(this);
         this.handleRegisterRequest = this.handleRegisterRequest.bind(this);
-    }
+    }//VAL = INPUT
     handleUsernameChange(val) {
         this.setState({ username: val })
     }
     handlePasswordChange(val) {
         this.setState({ password: val })
-    }
+    }//COMPARES STATES TO DB VIA LOGIN CTRL
     handleLoginRequest() {
         axios.post('/api/auth/login', {
             username: this.state.username,
@@ -33,7 +33,7 @@ class Home extends Component {
         }).catch(res => {
             alert('Profile not found.')
         })
-    }
+    }//COMPARES AND IF AVAILABLE CREATES NEW USER VIA THE CTRL
     handleRegisterRequest() {
         axios.post('/api/auth/register', {
             username: this.state.username,

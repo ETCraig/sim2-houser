@@ -20,6 +20,7 @@ app.use(session({
     // cookie: {},
 }));
 
+//WORKS WITH RETRIEVING THE DB. 
 massive(process.env.CONNECTION_STRING).then(dbInstance =>{
     // dbInstance.seedFile()
     // .then(res => console.log('Seed successful'))

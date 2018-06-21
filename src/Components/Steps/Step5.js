@@ -16,14 +16,14 @@ class Step5 extends Component {
         this.state = {
             rent: props.rent,
             completeBtnDisabele: false
-        }
+        }//HANDLEING OF STATES FOR ALL INPUTS AND BUTTONS
         this.handleRentChange = this.handleRentChange.bind(this);
         this.handleComplteBtnClick = this.handleComplteBtnClick.bind(this);
         this.handleCancelBtnClick = this.handleCancelBtnClick.bind(this);
-    }
+    }//VAL = INPUT
     handleRentChange(val) {
         this.setState({rent: val});
-    }
+    }//TAKES THE STATES AND PLACES THEM IN ADDPROPINFO
     handleComplteBtnClick() {
         let promise = axios.post('/api/properties', {
             prop_name: this.props.name,
@@ -36,7 +36,7 @@ class Step5 extends Component {
             loan_amt: this.props.loan,
             mon_mort: this.props.mortgage,
             rent: this.state.rent
-        });
+        });//LINKS TO THE DASHBOARD WHILE ADDING INFO TO DB AND THERFORE TO DASHBOARD
         promise.then(res => {
             this.props.delPropertyInfo()
             this.props.history.push('/Dashboard')
@@ -79,7 +79,7 @@ class Step5 extends Component {
         );
     }
 }
-
+//ALL GIVERN INFO FROM STEP 1 - STEP 5
 function mapStateToProps(state) {
     return {
         name: state.name,
@@ -94,5 +94,5 @@ function mapStateToProps(state) {
         rent: state.rent
     }
 }
-
+//REDUCER IN USE
 export default connect(mapStateToProps, {addPropertyInfo, delPropertyInfo}) (Step5);

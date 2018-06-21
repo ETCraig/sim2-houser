@@ -14,17 +14,16 @@ class Dashboard extends Component {
             rentFilterInput: 0,
             allHomeListings: [],
             filterHomeListings: []
-        }
+        }//HANDLEING OF STATES FOR ALL INPUTS AND BUTTONS
         this.handleRentInputChange = this.handleRentInputChange.bind(this);
         this.handleResetBtn = this.handleResetBtn.bind(this);
         this.handleFilterBtn = this.handleFilterBtn.bind(this);
-        }
-
+        }//GETS ALL THE PROPERTIES FROM THE DB VIA THE CONTROLLER
     componentDidMount() {
     axios.get('/api/properties').then(res => {
         this.setState({allHomeListings: res.data})
     })
-    }
+    }//VAL = INPUT
     handleRentInputChange(val){
     this.setState({rentFilterInput: val})
     }

@@ -16,18 +16,18 @@ class Step4 extends Component {
             loan: props.loan,
             mortgage: props.mortgage,
             nextBtnDisable: false
-        }
+        }//HANDLEING OF STATES FOR ALL INPUTS AND BUTTONS
         this.handleLoanChnage = this.handleLoanChnage.bind(this);
         this.handleMortgageChnage = this.handleMortgageChnage.bind(this);
         this.handleNextBtnClick = this.handleNextBtnClick.bind(this);
         this.handleCancelBtnClick = this.handleCancelBtnClick.bind(this);
-    }
+    }//VAL = INPUT
     handleLoanChnage(val) {
         this.setState({ loan: val });
     }
     handleMortgageChnage(val) {
         this.setState({ mortgage: val });
-    }
+    }//TAKES THE STATES AND PLACES THEM IN ADDPROPINFO
     handleNextBtnClick() {
         this.props.addPropertyInfo({
             loan: this.state.loan,
@@ -79,5 +79,5 @@ function mapStateToProps(state) {
         mortgage: state.mortgage
     }
 }
-
+//REDUCER IN USE
 export default connect(mapStateToProps, { addPropertyInfo, delPropertyInfo })(Step4);

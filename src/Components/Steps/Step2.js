@@ -18,14 +18,14 @@ class Step2 extends Component {
             state: props.state,
             zip: props.zip,
             nextBtnDisabled: false
-        }
+        }//HANDLEING OF STATES FOR ALL INPUTS AND BUTTONS
         this.handleAddressChange = this.handleAddressChange.bind(this);
         this.handleCityChange = this.handleCityChange.bind(this);
         this.handleStateChange = this.handleStateChange.bind(this);
         this.handleZipChange = this.handleZipChange.bind(this);
         this.handleNextBtnClick = this.handleNextBtnClick.bind(this);
         this.handleCancelBtnClick = this.handleCancelBtnClick.bind(this);
-    }
+    }//VAL = INPUT
     handleAddressChange(val) {
         this.setState({ address: val });
     }
@@ -37,7 +37,7 @@ class Step2 extends Component {
     }
     handleZipChange(val) {
         this.setState({ zip: val });
-    }
+    }//TAKES THE STATES AND PLACES THEM IN ADDPROPINFO
     handleNextBtnClick() {
         this.props.addPropertyInfo({
             address: this.state.address,
@@ -99,5 +99,5 @@ function mapStateToProps(state) {
         zip: state.zip
     }
 }
-
+//REDUCER IN USE
 export default connect(mapStateToProps, { addPropertyInfo, delPropertyInfo })(Step2);

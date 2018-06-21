@@ -15,14 +15,14 @@ class Step3 extends Component {
         this.state = {
             imgUrl: props.imgUrl,
             nextBtnDisable: false
-        }
+        }//HANDLEING OF STATES FOR ALL INPUTS AND BUTTONS
         this.handleImgUrlChnage = this.handleImgUrlChnage.bind(this);
         this.handleNextBtnClick = this.handleNextBtnClick.bind(this);
         this.handleCancelBtnClick = this.handleCancelBtnClick.bind(this);
-    }
+    }//VAL = INPUT
     handleImgUrlChnage(val) {
         this.setState({imgUrl: val});
-    }
+    }//TAKES THE STATES AND PLACES THEM IN ADDPROPINFO
     handleNextBtnClick() {
         this.props.addPropertyInfo({
             imgUrl: this.state.imgUrl
@@ -71,5 +71,5 @@ function mapStateToProps(state) {
         imgUrl: state.imgUrl
     }
 }
-
+//REDUCER IN USE
 export default connect(mapStateToProps, {addPropertyInfo, delPropertyInfo}) (Step3);
