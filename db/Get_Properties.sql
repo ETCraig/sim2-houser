@@ -1,1 +1,1 @@
-SELECT * FROM houserProperties 
+SELECT * FROM houserProperties WHERE user_id = $1;
